@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-function App() {
+//pages
+import About from "./pages/about";
+import Error from "./pages/error"; 
+import Home from "./pages/home";
+import SingleCocktail from "./pages/singlecocktail"
+
+//navbar
+import Navbar from "./components/navbar"
+
+function App(){
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Router>
+      <Navbar/>
+      <Routes>
+        <Route path='/coqtails' element={<Home/>}/>
+        <Route path='/coqtails/about' element={<About/>}/>
+        <Route path='/coqtails/singlecocktail:id' element={<SingleCocktail/>}/>
+        <Route path='/coqtails/*' element={<Error/>}/>
+      </Routes>
+    </Router>
+  )
 }
 
-export default App;
+
+export default App; 
+
+
+

@@ -1,13 +1,204 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kumbh+Sans:wght@700&family=Noto+Sans+Mono&display=swap');
+
+*{
+    font-family: 'Bebas Neue', cursive;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-family: 'Noto Sans Mono', monospace;
+    color: black;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+a{
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+a:hover{
+    color: rgb(107, 184, 164);
+}
+
+li{
+    list-style-type: none;
+    padding: 15px;
+}
+
+button{
+    all: unset;
+}
+
+img{
+    width: 100%;
+    display: block;
+}
+
+.nav{
+    background-color: rgb(255, 241, 224);
+}
+
+.nav-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo{
+    width: 150px; 
+    height: 150px;
+}
+.links-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 20px;
+}
+
+.title-1{
+    text-align: center;
+    margin-bottom: 10px;
+    border-bottom: black 1px solid;
+    font-size: 45px;
+}
+
+@media (max-width:500px) {
+    .nav-content{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .links-container{
+        justify-content: space-around;
+        padding: 25px;
+    }
+    .logo{
+        align-self: center;
+    }
+}
+
+
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: rgba(156, 156, 156, 0.6) 5px 5px 10px;
+    height: fit-content;
+}
+
+.about-para{
+    width: 50ch;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+@media (max-width:500px) {
+    .about-para{
+        width: 35ch;
+    }
+}
+
+.search-input, textarea{
+    
+}
+
+.search-input:focus{
+    outline: antiquewhite 2px solid;
+    background-color: antiquewhite;
+    border: none;
+}
+
+.random-container{
+    margin: 25px;
+}
+
+.random-span{
+    display:initial;
+}
+
+@media (max-width:500px) {
+    .random-span{
+        display: none;
+    }
+}
+
+.btn-random{
+    padding: 5px;
+    border: black 1px solid;
+    transition: all 0.3s ease-in-out;
+    
+}
+
+.btn-random:hover{
+    cursor: pointer;
+    box-shadow: black 2px 2px 0px;
+}
+
+.loading-section{
+    height: 100vh;
+}
+
+.loading{
+    background-color: rgb(131, 194, 177); 
+    width: 200px;
+    height: 25px;
+    animation-name: load;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    border-radius: 25px;
+    text-align: center;
+    padding:10px;
+}
+@keyframes load {
+    0% {width: 200px}
+    50% {width: 400px}
+    100% {width: 200px}
+}
+
+.sorry-message{
+    height: 50vh;
+}
+
+.drinks-container{
+    text-align: center;
+}
+
+.drinks-list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.cocktail-in-list{
+    border: black 1px solid;
+    margin: 10px;
+    padding: 5px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+.cocktail-in-list:hover{
+    cursor: pointer;
+    box-shadow: black 2px 2px 0px;
+}
+.cocktail-image-container{
+    height: 250px;
+    width: 250px;
+    margin: auto;
+}
+
+.single-drink-image{
+    width: 250px;
+    height: 250px;
+}
+
+.ingredients-container{
+    display: flex;
+    flex-direction: row;
+    border-bottom: rgb(145, 145, 145) 1px solid;
+}
+
+.instructions{
+    text-align: center;
+    border-radius: 25px;
+    box-shadow: rgb(107, 184, 164) 0px 0px 3px;
+    margin: 10px 10px 50px 10px;
+    padding: 10px;
 }
