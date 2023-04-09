@@ -6,7 +6,7 @@ import {Link} from 'react-router-dom'
 
 function cocktail({name, alc, image, id}) {
   return (
-    <Link to={`/coqtails/singlecocktail${id}`}>
+    <Link to={`pers_projects/coqtails/singlecocktail${id}`}>
       <article className='cocktail-in-list'>
         <div className='cocktail-image-container'>
           <img src={image} alt={name}></img>
