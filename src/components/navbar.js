@@ -6,17 +6,17 @@ const Navbar =()=>{
     return (
         <nav className='nav'>
             <div className='nav-content'>
-                <Link to='/coqtails'>
+                <Link to='pers_projects/coqtails'>
                     <img className='logo' src={logo} alt='logo'></img>
                 </Link>
                 
                 
                 <ul className='links-container'>
                     <li>
-                        <Link to='/coqtails'>Home</Link>
+                        <Link to='pers_projects/coqtails'>Home</Link>
                     </li>
                     <li>
-                        <Link to='/coqtails/about'>About</Link>
+                        <Link to='pers_projects/coqtails/about'>About</Link>
                     </li>
                 </ul>
             </div>
