@@ -33,7 +33,7 @@ function Home() {
       <SearchBar/>
       <div className='random-container'>
         <span className='random-span'>Or chose a random cocktail </span>
-        <Link to={`pers_projests/coqtails/singlecocktail${random}`} className='btn-random'>random cocktail</Link>
+        <Link to={`pers_projects/coqtails/singlecocktail${random}`} className='btn-random'>random cocktail</Link>
       </div>
       <Cocktaillist/>
     </section>
